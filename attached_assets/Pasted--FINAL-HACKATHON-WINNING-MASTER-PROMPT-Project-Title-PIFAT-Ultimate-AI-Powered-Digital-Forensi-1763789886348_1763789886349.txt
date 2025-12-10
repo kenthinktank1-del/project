@@ -1,0 +1,356 @@
+🚀 FINAL HACKATHON-WINNING MASTER PROMPT
+
+Project Title: PIFAT – Ultimate AI-Powered Digital Forensics & Evidence Management System
+
+1. OVERALL GOAL
+
+Build a world-class digital forensics platform with:
+
+Full frontend (React + TailwindCSS)
+
+Full backend (Node.js + Express or FastAPI)
+
+PostgreSQL database with full migrations
+
+Authentication + RBAC
+
+Evidence upload & classification (dropdown: Android, iOS, Tablet, Smart Watch, IP Camera, Smart Bulb, BLE Devices, Hard Drives, Laptops, CPUs)
+
+AI tamper detection (images, video, audio, documents)
+
+Chain-of-custody automation
+
+Blockchain hash verification (optional)
+
+Court-ready reports
+
+Multi-agency collaboration
+
+Advanced dashboards
+
+Email notifications
+
+OCR & full-text search
+
+AI-powered forensic assistant
+
+Insider threat monitoring
+
+Geospatial analysis
+
+Knowledge graph visualization
+
+3D scene reconstruction
+
+Futuristic, professional UI
+
+Generate all code, frontend, backend, database models, API handlers, AI pipelines, dashboards, and deployment scripts automatically. Make professional choices wherever details are missing.
+
+2. TECH STACK
+
+Backend:
+
+Node.js + Express (or FastAPI)
+
+JWT authentication (access + refresh tokens)
+
+bcrypt for password hashing
+
+Multer for file uploads
+
+Nodemailer / SendGrid for emails
+
+AI integration for tamper detection, deepfake detection, OCR, scene reconstruction
+
+Metadata extraction
+
+Optional blockchain for evidence hash storage
+
+Frontend:
+
+React + TailwindCSS
+
+Fully responsive UI
+
+Dark + Light mode
+
+Dashboards with charts, graphs, timelines, and 3D visualizations
+
+Database:
+
+PostgreSQL
+
+Migrations & indexes
+
+Foreign key relationships
+
+Tables for users, cases, evidence, tamper analysis, chain-of-custody, audit logs, OCR, email logs
+
+3. USER ROLES
+
+Admin:
+
+Create, edit, delete officers
+
+Assign cases
+
+Manage evidence permissions
+
+View chain-of-custody
+
+Review AI tamper reports
+
+Multi-agency management
+
+Generate court-ready exports
+
+Receive insider threat alerts
+
+Configure system settings
+
+Officer:
+
+View assigned cases
+
+Upload evidence (with device dropdown)
+
+Add notes
+
+Receive email notifications
+
+View AI tamper results
+
+Access chain-of-custody timelines
+
+External/Guest (optional):
+
+Read-only access
+
+Redacted evidence view
+
+4. DATABASE SCHEMA
+
+Users: id, full_name, email, password_hash, role, agency, created_at, updated_at
+
+Cases: id, case_number, category, title, description, status, priority, assigned_officer_id, created_by, created_at, updated_at
+
+Evidence: id, case_id, device_type (dropdown), file_name, file_type, file_path, file_hash_sha256, uploaded_by, metadata_json, created_at
+
+AI Tamper Analysis: id, evidence_id, is_tampered, tamper_score, detected_anomalies JSON, metadata_summary JSON, fingerprint_confidence, blockchain_tx_id, created_at
+
+Notes: id, case_id, created_by, content, created_at
+
+ChainOfCustody: id, evidence_id, user_id, action, timestamp, ip_address, signature_hash
+
+EmailLogs: id, recipient, subject, body_preview, status, timestamp
+
+AuditLogs: id, user_id, action, entity_type, entity_id, timestamp, ip, user_agent
+
+OCRText: id, evidence_id, text, created_at
+
+3D Scene Reconstructions: id, evidence_ids JSON, reconstructed_model_url, created_at
+
+GeoLocations: id, evidence_id, latitude, longitude, timestamp
+
+5. EVIDENCE DEVICE DROPDOWN
+
+When uploading evidence, officer selects:
+
+Android Phone
+
+iOS Phone
+
+Tablet
+
+Smart Watch
+
+IP Camera
+
+Smart Bulb
+
+BLE Devices
+
+Hard Drives
+
+Laptops
+
+CPUs
+
+6. EMAIL NOTIFICATIONS
+
+When Admin assigns a case:
+
+Automatically send HTML email with case number, title, description, assigned date, link to dashboard
+
+Log in EmailLogs and AuditLogs
+
+7. AI TAMPER DETECTION PIPELINE
+
+Compute SHA256 hash + BLAKE3, SHA512, MD5
+
+Extract metadata (EXIF, GPS, timestamps, document metadata)
+
+Run AI analysis for images, video, audio, documents:
+
+Deepfake detection
+
+Frame-level video tamper detection
+
+Audio deepfake analysis
+
+Compression / clone detection
+
+Camera fingerprint check
+
+Generate tamper score (0–100)
+
+Store in AI Tamper Analysis table
+
+Show report in UI with anomalies, confidence, authenticity gauge
+
+8. METADATA EXTRACTION
+
+Auto-extract metadata from all uploads
+
+Store in evidence.metadata_json
+
+Display for admins/officers
+
+9. OCR + SEARCH ENGINE
+
+OCR on images/PDFs
+
+Full-text search
+
+Search by names, phone numbers, emails, keywords, locations
+
+10. CHAIN-OF-CUSTODY SYSTEM
+
+Automated logging of all actions
+
+IP, user agent, signature hashes
+
+Timeline view
+
+Exportable chain-of-custody reports
+
+11. BLOCKCHAIN EVIDENCE VERIFICATION
+
+Optional blockchain recording of SHA256 hash
+
+Store blockchain_tx_id in AI Tamper Analysis
+
+12. COURT-READY EXPORTS
+
+PDF reports with: case summary, evidence list, chain-of-custody, AI tamper results, QR code, timestamp, digital signature
+
+Customizable bundles for lab, court, or external parties
+
+13. MULTI-AGENCY COLLABORATION
+
+Invite external officers
+
+Assign permissions
+
+Redacted evidence view
+
+Logs all external access
+
+14. DASHBOARDS
+
+Admin: analytics, total cases, tamper stats, officer activity, alerts, failed logins, chain-of-custody anomalies
+
+Officer: assigned cases, upcoming deadlines, AI alerts, evidence review, timeline
+
+15. AI INTELLIGENCE GRAPH
+
+Build graph of evidence, cases, suspects, locations
+
+Auto-connect related data
+
+Visual interactive graph
+
+Allow querying relationships
+
+16. INSIDER THREAT MONITORING
+
+Detect unusual logins
+
+Detect mass downloads
+
+Access outside jurisdiction
+
+Alert admin
+
+17. ADVANCED AI FEATURES
+
+AI case summary & intelligence assistant
+
+AI suspect profiling
+
+Scene reconstruction in 3D
+
+Geospatial evidence plotting & timeline
+
+Risk flags for suspicious evidence
+
+Deepfake detection (video/audio/image)
+
+Tamper localization heatmaps
+
+18. IOT FORENSICS MODULE
+
+Live capture/logs from BLE devices, smart cameras, smart bulbs
+
+Metadata extraction from IoT devices
+
+19. FUTURISTIC UI
+
+Neon cyber-forensics theme
+
+Data heatmaps
+
+Evidence timeline slider
+
+3D relationship graph
+
+Animated dashboards
+
+20. MULTI-LANGUAGE SUPPORT
+
+Automatic translation of notes, reports, emails, and evidence text
+
+21. API ENDPOINTS
+
+Auth: /auth/login, /auth/register, /auth/me
+Users: /users (CRUD)
+Cases: /cases (CRUD)
+Evidence: /evidence/upload, /evidence/:case_id, /evidence/:id, /evidence/:id/analysis/rerun
+Notes: /cases/:id/notes
+Chain-of-Custody: /evidence/:id/chain
+Email: /email/logs
+Audit: /audit
+OCR: /evidence/:id/ocr
+3D Scene: /scene/:id
+
+22. DEPLOYMENT REQUIREMENTS
+
+Auto-build frontend + backend
+
+Environment variables (DB URL, JWT_SECRET, EMAIL API, FILE_STORAGE_PATH, BLOCKCHAIN_KEY)
+
+HTTPS enabled
+
+Production logs
+
+CORS configured
+
+23. FINAL INSTRUCTIONS TO AI
+
+Generate the full system end-to-end with all above features.
+
+Do not ask questions.
+
+Make professional decisions.
+
+Produce fully functional project with folder structure, backend, frontend, database, AI pipelines, and deployment ready.
